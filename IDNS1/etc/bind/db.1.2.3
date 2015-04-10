@@ -1,0 +1,15 @@
+; reverse lookup database 
+$TTL    1
+@               IN      SOA     253.64.2.1.in-addr.arpa.    nobody.nowhere. (
+                        2006031201 ; serial
+                        28 ; refresh
+                        14 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl 
+                        )
+@                            IN      NS      253.64.2.1.in-addr.arpa.
+253.64.2.1.in-addr.arpa.    IN      A       1.2.65.253
+141          PTR        s3pubdns.pt
+140          PTR        s3pubsdns.pt.
+139          PTR        s3pubhttp.pt.
+232         PTR        pdadminadmin.pt.

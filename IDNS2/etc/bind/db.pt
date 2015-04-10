@@ -1,0 +1,14 @@
+$TTL   60000
+@               IN      SOA     idns2.pt.    root.idns2.pt. (
+                        2006031201 ; serial
+                        28800 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+@                   IN      NS      idns2.pt.
+idns2              IN      A       1.2.64.249
+
+xpto			IN 		NS      s3pubdns.xpto.pt.
+s3pubdns.xpto	IN 		A       1.2.3.141
+s3pubsdns.xpto	IN 		A 		1.2.3.140

@@ -1,0 +1,11 @@
+ip addr add dev eth0 1.2.64.238/30
+ip addr add dev eth1 1.2.64.254/30
+ip addr add dev eth2 1.2.64.250/30
+ip addr add dev eth3 1.2.64.246/30
+ip addr add dev eth4 1.2.64.242/30
+ip link set dev eth0 up
+ip link set dev eth1 up
+ip link set dev eth2 up
+ip link set dev eth3 up
+ip link set dev eth4 up
+/etc/init.d/zebra start

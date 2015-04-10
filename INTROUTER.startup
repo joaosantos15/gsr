@@ -1,0 +1,5 @@
+ip addr add dev eth0 1.2.3.230/30
+ip addr add dev eth1 1.2.64.237/30
+ip link set dev eth0 up
+ip link set dev eth1 up
+/etc/init.d/zebra start

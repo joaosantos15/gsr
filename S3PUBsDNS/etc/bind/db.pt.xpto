@@ -1,0 +1,12 @@
+$TTL 60000
+@               IN      SOA     s3pubsdns.xpto.pt.    root.s3pubsdns.xpto.pt. (
+                        2006031201 ; serial
+                        28 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        15 ; negative cache ttl
+                        )
+@               IN      NS      s3pubdns.xpto.pt.
+s3pubdns          IN      A       1.2.3.141
+s3pubsdns		  IN      A       1.2.3.140
+s3pubhttp         IN      A       1.2.3.139

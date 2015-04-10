@@ -1,0 +1,7 @@
+v1.0
+-ROUTER_PORTO,
+-ROUTER_FARO
+-CORE_ROUTER
+-INT_ROUTER
+Configurados os ip's estáticos
+-DHCP implementado
