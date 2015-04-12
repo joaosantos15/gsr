@@ -1,0 +1,3 @@
+ifconfig
+/etc/init.d/networking restart
+ifconfig
