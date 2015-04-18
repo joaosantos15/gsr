@@ -8,6 +8,5 @@ redistribute connected
 !network 1.2.3.128/28
 network 1.2.3.248/30
 network 1.2.3.244/30
-network 100.0.0.0/8
 !
 log file /var/log/zebra/ripd.log
