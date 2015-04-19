@@ -1,3 +1,8 @@
 ip addr add dev eth0 1.2.3.139/28
 ip link set dev eth0 up
 ip route add default via 1.2.3.142
+/etc/init.d/apache2 start
+a2ensite www.conf
+a2ensite clientes.conf
+/etc/init.d/apache2 reload
+

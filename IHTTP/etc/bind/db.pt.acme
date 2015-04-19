@@ -1,0 +1,13 @@
+$TTL   60000
+@               IN      SOA     ihttp.pt.    root.ihttp.pt. (
+                        2006031201 ; serial
+                        28800 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+@                   	IN      NS      ihttp.acme.pt.
+ihttp              		IN      A       1.2.64.245
+acme.pt					IN 		A 		1.2.64.245
+acme					IN 		A 		1.2.64.245
+www.acme.pt				IN 		A 		1.2.64.245
