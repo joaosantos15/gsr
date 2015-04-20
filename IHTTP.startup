@@ -5,3 +5,12 @@ ip route add default via 1.2.64.246
 /etc/init.d/apache2 start
 a2ensite www.conf
 /etc/init.d/apache2 reload
+
+chmod a+w /var/spool/mail
+chmod go-rw /etc/exim4/exim4.conf
+
+/etc/init.d/exim4 start
+/etc/init.d/inetd start
+
+adduser --disabled-password --gecos "" geral
+echo "geral:geral" | chpasswd

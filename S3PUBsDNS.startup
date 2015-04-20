@@ -2,3 +2,23 @@ ip addr add dev eth0 1.2.3.140/28
 ip link set dev eth0 up
 ip route add default via 1.2.3.142
 /etc/init.d/bind start
+/etc/init.d/snmpd start
+
+chmod a+w /var/spool/mail
+chmod go-rw /etc/exim4/exim4.conf
+
+/etc/init.d/exim4 start
+/etc/init.d/inetd start
+
+adduser --disabled-password --gecos "" administracao
+echo "administracao:administracao" | chpasswd
+adduser --disabled-password --gecos "" contabilidade
+echo "contabilidade:contabilidade" | chpasswd
+adduser --disabled-password --gecos "" lisboa
+echo "lisboa:lisboa" | chpasswd
+adduser --disabled-password --gecos "" hr
+echo "hr:hr" | chpasswd
+adduser --disabled-password --gecos "" faro
+echo "faro:faro" | chpasswd
+adduser --disabled-password --gecos "" porto
+echo "porto:porto" | chpasswd
