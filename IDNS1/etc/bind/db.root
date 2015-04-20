@@ -10,6 +10,6 @@ $TTL   60000
 @               IN      NS      ROOT-SERVER.
 ROOT-SERVER.	IN	A	1.2.64.253
 
-pt.		IN 	NS	idns2.pt.
+pt.			IN 	NS	idns2.pt.
 idns2.pt.	IN 	A	1.2.64.249
 

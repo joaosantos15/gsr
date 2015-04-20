@@ -10,7 +10,6 @@ $TTL   60000
 idns2              	IN      A       1.2.64.249
 
 xpto			IN 		NS      s3pubdns.xpto.pt.
-acme			IN 		NS		ihttp.acme.pt
+acme			IN 		NS		ihttp.acme.pt.
 ihttp.acme		IN 		A 		1.2.64.245
 s3pubdns.xpto	IN 		A       1.2.3.141
-s3pubsdns.xpto	IN 		A 		1.2.3.140

@@ -6,9 +6,9 @@ $TTL 60000
                         3600000 ; expire
                         15 ; negative cache ttl
                         )
-@               IN      NS      s3pubdns.xpto.pt.
-s3pubdns          IN      A       1.2.3.141
-s3pubsdns		  IN      A       1.2.3.140
-s3pubhttp         IN      A       1.2.3.139
-www				 IN 	A 		 1.2.3.139
-clientes		IN 	A			1.2.3.139
+@               	IN      NS      s3pubdns.xpto.pt.
+s3pubdns          	IN      A       1.2.3.141
+s3pubsdns		  	IN      A       1.2.3.140
+s3pubhttp         	IN      A       1.2.3.139
+www				 	IN 		A 		1.2.3.139
+clientes			IN 		A		1.2.3.139

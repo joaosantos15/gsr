@@ -8,6 +8,4 @@ $TTL   60000
                         )
 @                   	IN      NS      ihttp.acme.pt.
 ihttp              		IN      A       1.2.64.245
-acme.pt					IN 		A 		1.2.64.245
-acme					IN 		A 		1.2.64.245
-www.acme.pt				IN 		A 		1.2.64.245
+www						IN 		A 		1.2.64.245
