@@ -5,4 +5,5 @@ ip route add default via 1.2.3.142
 a2ensite www.conf
 a2ensite clientes.conf
 /etc/init.d/apache2 reload
+/etc/init.d/snmpd start
 

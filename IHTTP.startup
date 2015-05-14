@@ -14,3 +14,4 @@ chmod go-rw /etc/exim4/exim4.conf
 
 adduser --disabled-password --gecos "" geral
 echo "geral:geral" | chpasswd
+/etc/init.d/snmpd start
