@@ -4,7 +4,8 @@ ip route add default via 1.2.3.142
 /etc/init.d/apache2 start
 a2ensite www.conf
 a2ensite clientes.conf
-/etc/init.d/apache2 reload
+a2enmod ssl
+/etc/init.d/apache2 restart
 /etc/init.d/snmpd start
 /etc/init.d/ssh start
 adduser --disabled-password --gecos "" xptoadmin
@@ -13,4 +14,3 @@ cd /home
 chown -R xptoadmin:xptoadmin xptoadmin
 chmod -R 700 xptoadmin/
 dpkg -i /hostlab/shared/sudo_1.6.9p17-3_i386.deb
-
