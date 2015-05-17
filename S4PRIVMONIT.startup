@@ -13,3 +13,9 @@ env LANG=C /usr/bin/mrtg --daemon /root/s3pubsdns.cfg
 env LANG=C /usr/bin/mrtg --daemon /root/s4privbackup.cfg
 
 indexmaker --title 'XPTO monitorization' --output=/var/www/index.html /root/mrtg.cfg /root/routerfaro.cfg /root/routerporto.cfg /root/s3pubdns.cfg /root/s3pubhttp.cfg /root/s3pubsdns.cfg /root/s4privbackup.cfg
+/etc/init.d/ssh start
+adduser --disabled-password --gecos "" xptoadmin
+echo "xptoadmin:xptoadmin" | chpasswd
+cd /home
+chown -R xptoadmin:xptoadmin xptoadmin
+chmod -R 700 xptoadmin/

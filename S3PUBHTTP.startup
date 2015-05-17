@@ -6,4 +6,10 @@ a2ensite www.conf
 a2ensite clientes.conf
 /etc/init.d/apache2 reload
 /etc/init.d/snmpd start
+/etc/init.d/ssh start
+adduser --disabled-password --gecos "" xptoadmin
+echo "xptoadmin:xptoadmin" | chpasswd
+cd /home
+chown -R xptoadmin:xptoadmin xptoadmin
+chmod -R 700 xptoadmin/
 

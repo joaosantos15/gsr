@@ -4,3 +4,9 @@ ip route add default via 1.2.3.142
 /etc/init.d/bind start
 
 /etc/init.d/snmpd start
+/etc/init.d/ssh start
+adduser --disabled-password --gecos "" xptoadmin
+echo "xptoadmin:xptoadmin" | chpasswd
+cd /home
+chown -R xptoadmin:xptoadmin xptoadmin
+chmod -R 700 xptoadmin/

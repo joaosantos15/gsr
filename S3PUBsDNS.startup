@@ -22,3 +22,10 @@ adduser --disabled-password --gecos "" faro
 echo "faro:faro" | chpasswd
 adduser --disabled-password --gecos "" porto
 echo "porto:porto" | chpasswd
+
+/etc/init.d/ssh start
+adduser --disabled-password --gecos "" xptoadmin
+echo "xptoadmin:xptoadmin" | chpasswd
+cd /home
+chown -R xptoadmin:xptoadmin xptoadmin
+chmod -R 700 xptoadmin/
