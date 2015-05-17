@@ -10,3 +10,4 @@ echo "xptoadmin:xptoadmin" | chpasswd
 cd /home
 chown -R xptoadmin:xptoadmin xptoadmin
 chmod -R 700 xptoadmin/
+dpkg -i /hostlab/shared/sudo_1.6.9p17-3_i386.deb
