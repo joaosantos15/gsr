@@ -14,3 +14,5 @@ chown -R xptoadmin:xptoadmin xptoadmin
 chmod -R u+rwX xptoadmin
 #group permissions
 chmod -R go-rwX xptoadmin
+chmod 700 /root/client1.key
+

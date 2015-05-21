@@ -4,3 +4,39 @@ ip link set dev eth0 up
 ip link set dev eth1 up
 /etc/init.d/zebra start
 /etc/init.d/snmpd start
+
+iptables -F
+
+#Permite que as maquinas internas acedam a internet sem restricoes
+iptables -A FORWARD -i eth0 -j ACCEPT
+iptables -A FORWARD -i eth1 -m state --state ESTABLISHED,RELATED -j ACCEPT 
+
+#Permite HTTPs para o servidor de HTTP
+iptables -A FORWARD -p tcp -d 1.2.3.139 --dport 443 -j ACCEPT   
+
+#Permite HTTP para o servidor de HTTP
+iptables -A FORWARD -p tcp -d 1.2.3.139 --dport 80 -j ACCEPT  
+
+#Permite IMAP para o servidor sDns
+iptables -A FORWARD -d 1.2.3.140 -p tcp --dport 143 -j ACCEPT 
+
+#Permitir DNS para servidor S3Dns
+iptables -A FORWARD -p udp -d 1.2.3.141 --dport 53 -j ACCEPT 
+
+#Permitir DNS para servidor S3sDns
+iptables -A FORWARD -p udp -d 1.2.3.140 --dport 53 -j ACCEPT   
+
+#Permite SMTP para o servidor sDns
+iptables -A FORWARD -p tcp -d 1.2.3.140 --dport 25 -j ACCEPT
+
+#Permite POP3 para o servidor sDns
+iptables -A FORWARD -p tcp -d 1.2.3.140 --dport 110 -j ACCEPT
+
+#Permite as maquinas de IP privado aceder a internet
+iptables -t nat -A POSTROUTING -o eth1 -s 192.168.0.0/16 -j MASQUERADE
+
+iptables -P FORWARD DROP
+
+
+
+
